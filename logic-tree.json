@@ -1,0 +1,59 @@
+{
+    "q1":{
+       "text":"Che *adversary model* prevedi?",
+       "opts":["Malicious", "Honest-but-curious"],
+       "opts_next":["malicious", "todo"],
+       "opts_warnings": ["kanon", ""]
+    },
+
+    "malicious":{
+       "text":"Quante dimensioni ha il tuo dataset?",
+       "opts":["Tante (10+)", "Poche (10-)"],
+       "opts_next":["end", "dati-numerici"],
+       "opts_warnings": ["curse-of-dimensionality", ""]
+    },
+
+    "dati-numerici":{
+       "text":"Ci sono colonne numeriche?",
+       "opts":["Sì", "No"],
+       "opts_next":["categorici-dopo-numerici", "categorici-dopo-numerici"],
+       "opts_warnings": ["warning-quantizza", ""]
+    },
+
+    "categorici-dopo-numerici":{
+       "text":"Ci sono variabili **non** numeriche?",
+       "opts":["Sì", "No"],
+       "opts_next":["categorici-non-strutturati", "end"],
+       "opts_warnings": ["", ""]
+    },
+
+    "categorici-non-strutturati":{
+       "text":"Ci sono variabili non strutturate (es., testo libero)?",
+       "opts":["Sì", "No"],
+       "opts_next":["categorici-strutturati", "categorici-strutturati"],
+       "opts_warnings": ["cancellazione-testo", ""]
+    },
+
+    "categorici-strutturati":{
+       "text":"Ci sono variabili strutturate, con una possibile gerarchia (es., indirizzi)?",
+       "opts":["Sì", "No"],
+       "opts_next":["categorici-non-semantici", "categorici-non-semantici"],
+       "opts_warnings": ["generalizzazione", ""]
+    },
+
+    "categorici-non-semantici":{
+       "text":"Ci sono variabili categoriche, ma senza gerarchia (es., nomi propri)?",
+       "opts":["Sì", "No"],
+       "opts_next":["end", "end"],
+       "opts_warnings": ["warning-non-semantici", ""]
+    },
+
+
+    "":{
+       "text":"",
+       "opts":["", ""],
+       "opts_next":["", ""],
+       "opts_warnings": ["", ""]
+    }
+
+ }

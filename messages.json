@@ -1,0 +1,9 @@
+{
+    
+    "kanon":"In questo setting, un adversary malicious può solo essere contrastato attraverso l'introduzione della $k$-anonymity. Generalmente, l'impatto atteso è medio/basso.",
+    "curse-of-dimensionality": "Se hai tante colonne (es. più di 10), il tuo dataset è soggetto alla ***curse of dimensionality***. È di fatto impossibile ottenere la $k$-anonymity. Suggeriamo di considerare la presenza di un adversary *Honest-but-Curious*.",
+    "warning-quantizza": "Per raggruppare efficacemente i gruppi, è utile quantizzare i valori (vedi il deliverable per le tecniche di quantizzazione consigliate.)",
+    "cancellazione-testo": "**ATTENZIONE**: il testo libero non è anonimizzabile, perciò per prevenire la privacy deve essere eliminato dal dataset. Questo può avere un **alto impatto** sulle performance del modello.",
+    "generalizzazione": "Considera di inserire la gerarchia di generalizzazione nel software che implementa la $k$-anonymity. Questo permetterà di ridurre l'impatto sul dataset.",
+    "warning-non-semantici": "Puoi rimuovere questi attributi dal dataset anonimizzato: **l'impatto è nullo**"
+}
