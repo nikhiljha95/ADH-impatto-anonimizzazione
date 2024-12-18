@@ -5,5 +5,12 @@
     "warning-quantizza": "Per raggruppare efficacemente i gruppi, è utile quantizzare i valori (vedi il deliverable per le tecniche di quantizzazione consigliate.)",
     "cancellazione-testo": "**ATTENZIONE**: il testo libero non è anonimizzabile, perciò per prevenire la privacy deve essere eliminato dal dataset. Questo può avere un **alto impatto** sulle performance del modello.",
     "generalizzazione": "Considera di inserire la gerarchia di generalizzazione nel software che implementa la $k$-anonymity. Questo permetterà di ridurre l'impatto sul dataset.",
-    "warning-non-semantici": "Puoi rimuovere questi attributi dal dataset anonimizzato: **l'impatto è nullo**"
+    "warning-non-semantici": "Puoi rimuovere questi attributi dal dataset anonimizzato: **l'impatto è nullo**",
+    "hbc": "Lo scenario Honest-but-Curious permette di utilizzare strumenti di privacy colonna-per-colonna.",
+    "hbc-adu": "In caso il task sia quello di anomaly detection unsupervised, l'impatto atteso è medio/alto.",
+    "hbc-non-adu": "In caso il task di ML di riferimento sia clustering o algoritmi supervised, l'impatto atteso è medio/basso.",
+    "hbc-non-semantic": "**L'impatto atteso** di cancellare feature non semantiche è **nullo**",
+    "hbc-struct": "L'anonimizzazione di un dato categorico strutturato (es., generalizzione attraverso la sua gerarchia semantica) ha un **impatto atteso medio/alto**",
+    "hbc-non-struct": "L'anonimizzazione di un dato categorico non strutturato (es., embedding, sintesi, estrazione di feature) ha un **impatto alto**"
+
 }

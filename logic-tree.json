@@ -2,9 +2,14 @@
     "q1":{
        "text":"Che *adversary model* prevedi?",
        "opts":["Malicious", "Honest-but-curious"],
-       "opts_next":["malicious", "todo"],
-       "opts_warnings": ["kanon", ""]
+       "opts_next":["malicious", "hbc"],
+       "opts_warnings": ["kanon", "hbc"]
     },
+
+    
+
+
+
 
     "malicious":{
        "text":"Quante dimensioni ha il tuo dataset?",
@@ -46,6 +51,39 @@
        "opts":["Sì", "No"],
        "opts_next":["end", "end"],
        "opts_warnings": ["warning-non-semantici", ""]
+    },
+
+
+
+
+
+
+    "hbc":{
+       "text":"Di quale tipo di dato è composta la tua colonna?",
+       "opts":["Numerico", "Categorico"],
+       "opts_next":["hbc-numerico", "hbc-categorico"],
+       "opts_warnings": ["", ""]
+    },
+
+    "hbc-numerico":{
+       "text":"Qual è il tuo task di ML target?",
+       "opts":["Anomaly detection unsupervised", "Altro"],
+       "opts_next":["end", "end"],
+       "opts_warnings": ["hbc-adu", "hbc-non-adu"]
+    },
+
+    "hbc-categorico":{
+       "text":"Il tuo tipo di dato è semantico (ha un *significato*, tipo un indirizzo) o non semantico (è una stringa di valori, tipo un nome o un identificativo pseudo-randomico)?",
+       "opts":["Semantico", "Non semantico"],
+       "opts_next":["hbc-semantic", "end"],
+       "opts_warnings": ["", "hbc-non-semantic"]
+    },
+
+    "hbc-semantic":{
+       "text":"Il tuo tipo di dato è organizzato secondo una struttura/gerarchia (es., indirizzo) o no (es., testo libero)?",
+       "opts":["Strutturato", "Non strutturato"],
+       "opts_next":["end", "end"],
+       "opts_warnings": ["hbc-struct", "hbc-non-struct"]
     },
 
 
